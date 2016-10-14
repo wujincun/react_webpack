@@ -1,6 +1,7 @@
 /**
  * Created by wujincun on 2016/10/14.
  */
+
 module.export = {
     entry:'./app/index.js',//打包的入口文件，可以是string或object
     output:{//配置打包结果，是一个对象 object
@@ -16,4 +17,7 @@ module.export = {
             }
         ]
     },
+    resolve:{
+        extensions: ['', '.js', '.jsx']//自动补全后缀
+    }
 }
