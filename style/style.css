@@ -1,0 +1,5 @@
+@import "./reset.css";
+div{
+    border: 1px solid #ccc;
+    font-size: 50px;
+}
