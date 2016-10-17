@@ -4,4 +4,11 @@
 var fn = () =>{
     console.log(123)
 }
-fn()
+fn();
+class Student(){
+    hello(){
+        console.log("hello")
+    }
+}
+var s = new Student;
+s.hello();
