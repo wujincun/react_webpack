@@ -3,6 +3,12 @@
  */
 
 module.exports = {
+   /* entry: {
+        app: [
+            'webpack-dev-server/client?http://localhost:8080/',
+            './app/index.js'
+        ]
+    },*/
     entry:'./app/index.js',//打包的入口文件，可以是string或object
     output:{//配置打包结果，是一个对象 object
         path:'./build',
@@ -16,6 +22,10 @@ module.exports = {
                 exclude:"/node_modules" //排除的文件夹
             }
         ]
+    },
+    devServer:{  //配置服务，但是即使在此处hot和inline设为true命令行里仍旧要写
+        hot:true,
+        inline:true
     },
     resolve:{
         extensions: ['', '.js','.css', '.jsx']//自动补全后缀
