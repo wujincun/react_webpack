@@ -11,11 +11,10 @@ module.exports = {
     },*/
 
     entry:{//打包的入口文件，可以是string或object
-        build:'./app/index.js',
-        abs:'./app/abs.js'
+        build:'./es6/index.js',
     },
     output:{//配置打包结果，是一个对象 object
-        path:'./build',
+        path:'./es6_build',
         filename:'[name].js'   //因为打包多个文件，即将build、abs分别打包，此时fileName:[].js
     },
     module:{//定义了对模块的处理逻辑  object
@@ -38,11 +37,6 @@ module.exports = {
         new htmlWebpackPlugin({
             title:"欢迎",
             chunks:["build"]//html中引入的js模块
-        }),
-        new htmlWebpackPlugin({
-            title:"欢迎",
-            filename:"class.html",//生成的html文件名称，如果不写，则默认为index.html
-            chunks:["abs"]
-        }),
+        })
     ]
 }
