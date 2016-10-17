@@ -1,7 +1,7 @@
 /**
  * Created by wujincun on 2016/10/14.
  */
-
+var htmlWebpackPlugin=require("html-webpack-plugin");
 module.exports = {
    /* entry: {
         app: [
@@ -9,10 +9,14 @@ module.exports = {
             './app/index.js'
         ]
     },*/
-    entry:'./app/index.js',//打包的入口文件，可以是string或object
+
+    entry:{//打包的入口文件，可以是string或object
+        build:'./app/index.js',
+        abs:'./app/abs.js'
+    },
     output:{//配置打包结果，是一个对象 object
         path:'./build',
-        filename:'build.js'
+        filename:'[name].js'   //因为打包多个文件，即将build、abs分别打包，此时fileName:[].js
     },
     module:{//定义了对模块的处理逻辑  object
         loaders:[//定义了一系列的加载器 array
@@ -29,5 +33,10 @@ module.exports = {
     },
     resolve:{
         extensions: ['', '.js','.css', '.jsx']//自动补全后缀
-    }
+    },
+    plugins:[
+        new htmlWebpackPlugin({
+            title:"欢迎"
+        })
+    ]
 }
