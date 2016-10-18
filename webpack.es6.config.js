@@ -2,6 +2,7 @@
  * Created by wujincun on 2016/10/14.
  */
 var htmlWebpackPlugin=require("html-webpack-plugin");
+var path = require("path");//path内置模块不需安装
 module.exports = {
    /* entry: {
         app: [
@@ -23,6 +24,14 @@ module.exports = {
                 test:/.css$/,//正则
                 loaders:['style','css'],//从右向左
                 exclude:"/node_modules" //排除的文件夹
+            },
+            {
+                test:/.js$/,
+                loaders:['babel-loader'],
+                exclude:"/node_modules",
+                include:path.resolve(__dirname,"/es6/") //包含哪些文件,当前目录下的es6
+
+               // query:['es2015'] //
             }
         ]
     },
