@@ -8,7 +8,9 @@
     "build": "webpack-dev-server --hot --inline",
     "start_html": "webpack --config webpack.html.config.js",
     "start_es6": "webpack --config webpack.es6.config.js",
-    "build_es6": "webpack-dev-server --hot --inline --config webpack.es6.config.js"
+    "start_react": "webpack --config webpack.react.config.js",
+    "build_es6": "webpack-dev-server --hot --inline --config webpack.es6.config.js",
+    "build_react": "webpack-dev-server --hot --inline --config webpack.react.config.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
     "html-webpack-plugin": "^2.22.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-hot-loader": "^3.0.0-beta.6",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
