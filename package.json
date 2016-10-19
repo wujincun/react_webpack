@@ -9,8 +9,10 @@
     "start_html": "webpack --config webpack.html.config.js",
     "start_es6": "webpack --config webpack.es6.config.js",
     "start_react": "webpack --config webpack.react.config.js",
+    "start_todo": "webpack --config webpack.todo.config.js",
     "build_es6": "webpack-dev-server --hot --inline --config webpack.es6.config.js",
-    "build_react": "webpack-dev-server --hot --inline --config webpack.react.config.js"
+    "build_react": "webpack-dev-server --hot --inline --config webpack.react.config.js",
+    "build_todo": "webpack-dev-server --hot --inline --config webpack.todo.config.js"
   },
   "repository": {
     "type": "git",

@@ -4,9 +4,11 @@
 var React = require("react");//会查找node_modules里的文件，不要写相对路径
 var ReactDOM = require("react-dom");
 
+import App from './app';
+
 var Hello = react.creatClass({
     render:function () {
-        return <h1>hello</h1>
+        return <div><App /></div>
     }
 });
 var div1 = document.createElement('div');
