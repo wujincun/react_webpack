@@ -8,7 +8,7 @@ import ReactDOM from "react-dom";
 import app from './app';
 import Item from './item';
 
-class Main extends react.component{
+class Main extends React.component{
     render(){
         var dataArr = this.props.dataArr;
         var content,footer,num = 0;

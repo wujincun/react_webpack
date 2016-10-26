@@ -2,7 +2,7 @@
  * Created by wujincun on 2016/10/17.
  */
 var fn = () =>{
-    console.log(456)
+    console.log(4567)
 };
 fn();
 

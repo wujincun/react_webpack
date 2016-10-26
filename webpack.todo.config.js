@@ -25,17 +25,33 @@ module.exports = {
                 loaders:['style','css'],//从右向左
                 exclude:"/node_modules" //排除的文件夹
             },
-            {
+            /*{
                 test:/.jsx?$/,
                 loaders:['react-hot','babel?presets[]=es2015&presets[]=react'],
-                /*
+                /!*
                 loaders:['babel'],//如果不按上面写，可以写这两个配置
                 query:['es2015','react'],//babel的配置
                 //如果写成loaders:['react-hot','babel']，那么query就是react-hot和babel的参数，不正确
-                */
+                *!/
                 //exclude:"/node_modules",
                 include:path.resolve(__dirname,"todo") //包含哪些文件,当前目录下的react，不需要//
 
+            }*/
+          /*  {
+                test: /.js$/,
+                exclude: "/node_modules", //排除的文件夹
+                loaders: ['react-hot',"babel-loader?presets[]=es2015&presets[]=react"],
+                include:path.resolve(__dirname,"react") //包含哪些文件,当前目录下的react，不需要//
+
+            },*/
+            {
+                test: /\.jsx?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                query: {
+                    cacheDirectory: true,
+                    presets: ['react', 'es2015']
+                }
             }
         ]
     },
